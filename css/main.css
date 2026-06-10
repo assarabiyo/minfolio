@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.inner {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 헤더 */
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #ffdd80;
+  height: 120px;
+}
+header .inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gnb {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+.gnb li a {
+  padding: 10px;
+  font-family: "East Sea Dokdo", sans-serif;
+  font-size: 32px;
+}
+
+/* 비주얼 */
+#visual .inner {
+  position: relative;
+}
+
+.replay {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+}
+
+/* 어바웃 */
+.title {
+  position: relative;
+  margin: 100px 0 80px;
+  text-align: center;
+}
+.title img {
+  width: 65%;
+  min-width: 300px;
+}
+.title h1 {
+  position: absolute;
+  top: 45%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-family: "East Sea Dokdo", sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+}
