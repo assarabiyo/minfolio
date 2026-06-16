@@ -101,18 +101,20 @@ header .inner {
     height: 320px;
 
     background: #ddd;
-
-    border: 12px solid #fff;
+    border-width: 45px 12px 20px;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 10px;
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.about-box:first-of-type .about-pic {
-    transform: rotate(-8deg);
+.motion-pic {
+    transform: rotate(8deg);
 }
 
 .about-box:last-child .about-pic {
-    transform: rotate(8deg);
+    transform: rotate(-6deg);
 }
 
 .about-txt {
@@ -145,9 +147,9 @@ header .inner {
    Work
 ------------------------ */
 
-#work {
-    padding-top: 220px;
-}
+/* #work {
+    padding-top: 100px;
+} */
 
 #work .title {
     margin-bottom: 100px;
@@ -237,18 +239,20 @@ header .inner {
 }
 
 .contome {
-    position: relative;
+    background: url(../images/contact_F.svg) no-repeat center;
+    background-size: contain;
+
+    width: min(700px, 90vw);
+    aspect-ratio: 781.4 / 408.8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 100px;
 }
 
-.contome img {
-    width: 350px;
-}
 
 .contome h1 {
-    position: absolute;
-    left: 50%;
-    top: 48%;
-
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
@@ -258,7 +262,7 @@ header .inner {
 }
 
 .mailbox {
-    margin-top: 80px;
+    margin-bottom: 80px;
 
     display: flex;
     justify-content: center;
@@ -278,15 +282,78 @@ header .inner {
     border-radius: 30px;
 }
 
-.mailform {
-    width: 600px;
-    height: 400px;
+.contact-form{
+    max-width:700px;
+    margin:0 auto;
 
-    margin: 60px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
 
-    background: #ddd;
+.contact-form input,
+.contact-form textarea,
+.contact-form button{
+    font-family: inherit;
+}
 
-    padding: 40px;
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+
+    padding:20px;
+
+    border:3px solid #333;
+    border-radius:20px;
+
+    font-size:1rem;
+
+    background:#fff;
+
+    transition:.3s;
+    
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+
+    border-color:#f5d77b;
+
+    box-shadow:6px 6px 0 #f5d77b;
+}
+
+.contact-form textarea{
+    min-height:180px;
+    resize:none;
+    
+}
+
+.contact-form button{
+    align-self:flex-end;
+
+    padding:15px 30px;
+
+    border:none;
+    border-radius:999px;
+
+    background:#f4b319;
+
+    color:#333;
+
+    font-weight:700;
+
+    cursor:pointer;
+    transform:rotate(-2deg);
+
+    transition:.3s;
+    
+}
+
+.contact-form button:hover{
+    transform:translateY(-3px) rotate(-2deg);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
 
 /* ------------------------

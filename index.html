@@ -44,7 +44,7 @@
                     <h1>부드러운 색감, 통통 튀는 모션,<br />기억에 남는 이야기.</h1>
                 </div>
                 <div class="about-box">
-                    <img src="#" alt="" class="about-pic" />
+                    <img src="#" alt="" class="about-pic motion-pic" />
                     <div class="about-txt">
                         <h2 class="motion">Motion Graphics</h2>
                         <p>움직임 하나하나에 리듬감을 넣어, 시선이 머무는 순간을 디자인합니다.</p>
@@ -115,7 +115,6 @@
                 </div>
                 <div class="con-box">
                     <div class="contome">
-                        <img src="images/contact_F.svg" alt="" />
                         <h1>저와 함께 해요~ :)</h1>
                     </div>
                     <img src="" alt="종이 비행기" />
@@ -124,7 +123,20 @@
                     <p>나의메일주소@어쩌구</p>
                     <button class="copy">복사</button>
                 </div>
-                <div class="mailform">여기는 메일 폼입니다~~~</div>
+
+                <form class="contact-form" id="contactForm">
+                    <input type="text" id="name" placeholder="성함 / 회사명" required />
+
+                    <input type="email" id="email" placeholder="답장받을 이메일" required />
+
+                    <textarea
+                        id="message"
+                        placeholder="간단한 문의는 바로 남겨주시면 빠르게 확인하고 답장 드리겠습니다."
+                        required
+                    ></textarea>
+
+                    <button type="submit">SEND MESSAGE →</button>
+                </form>
             </div>
         </section>
 
