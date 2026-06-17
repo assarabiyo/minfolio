@@ -35,37 +35,47 @@ var swiper = new Swiper(".mainwork-list", {
     },
 });
 
-
 const form = document.getElementById("contactForm");
+const modal = document.querySelector(".success-modal");
+const modalClose = document.querySelector(".modal-close");
+const submitBtn = form.querySelector("button");
 
 form.addEventListener("submit", async (e) => {
-
     e.preventDefault();
+
+    if (document.getElementById("website").value) {
+        return;
+    }
 
     const data = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
-        message: document.getElementById("message").value
+        message: document.getElementById("message").value,
     };
 
-    try {
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
 
+    try {
         const res = await fetch(
             "https://script.google.com/macros/s/AKfycbxxE_C2XjpDzHMCLl3uWgWl2LJZBWp5nKxxicHsSPVAAgPp87zLJkxhL8o8QTx4bNUH/exec",
             {
                 method: "POST",
-                body: JSON.stringify(data)
-            }
+                body: JSON.stringify(data),
+            },
         );
 
         console.log(res);
-        alert("전송 완료!");
-
-    } catch(err){
-
+        modal.classList.add("active");
+        form.reset();
+    } catch (err) {
         console.error(err);
-        alert("전송 실패!");
-
+        alert("메시지를 보내는 데 실패했어요😥");
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "SEND MESSAGE →";
     }
-
+});
+modalClose.addEventListener("click", () => {
+    modal.classList.remove("active");
 });

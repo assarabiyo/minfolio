@@ -126,19 +126,32 @@
 
                 <form class="contact-form" id="contactForm">
                     <input type="text" id="name" placeholder="성함 / 회사명" required />
-
                     <input type="email" id="email" placeholder="답장받을 이메일" required />
-
-                    <textarea
-                        id="message"
-                        placeholder="간단한 문의는 바로 남겨주시면 빠르게 확인하고 답장 드리겠습니다."
-                        required
-                    ></textarea>
+                    <textarea id="message" placeholder="간단한 문의를 남겨주세요!" required></textarea>
+                    <!-- 허니팟 -->
+                    <div class="honeypot">
+                        <input type="text" id="website" autocomplete="off" tabindex="-1" />
+                    </div>
 
                     <button type="submit">SEND MESSAGE →</button>
                 </form>
             </div>
         </section>
+
+        <div class="success-modal">
+            <div class="modal-box">
+                <p class="modal-icon">🍀</p>
+
+                <h3>메시지가 무사히 도착했어요!</h3>
+
+                <p>
+                    빠른 시일 내에<br />
+                    답변드릴게요 :)
+                </p>
+
+                <button class="modal-close">확인</button>
+            </div>
+        </div>
 
         <!-- ------------------------
      하단
