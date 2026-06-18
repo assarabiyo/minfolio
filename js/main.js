@@ -79,3 +79,14 @@ form.addEventListener("submit", async (e) => {
 modalClose.addEventListener("click", () => {
     modal.classList.remove("active");
 });
+
+
+const modal2 = document.querySelector(".work-modal-bg");
+
+document.querySelector(".work-card").addEventListener("click",()=>{
+    modal2.classList.add("active");
+});
+
+document.querySelector(".wmodal-close").addEventListener("click",()=>{
+    modal2.classList.remove("active");
+});
