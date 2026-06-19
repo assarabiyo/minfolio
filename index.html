@@ -43,16 +43,16 @@
                 <div class="about-s">
                     <h1>부드러운 색감, 통통 튀는 모션,<br />기억에 남는 이야기를 만들어요.</h1>
                 </div>
-                <div class="about-box">
-                    <img src="#" alt="" class="about-pic motion-pic" />
+                <div class="about-box motion">
+                    <img src="#" alt="" class="about-pic" />
                     <div class="about-txt">
-                        <h2 class="motion">Motion Graphics</h2>
+                        <h2>Motion Graphics</h2>
                         <p>움직임 하나하나에 리듬감을 넣어,<br />시선이 머무는 순간을 디자인합니다.</p>
                     </div>
                 </div>
-                <div class="about-box">
+                <div class="about-box media">
                     <div class="about-txt">
-                        <h2 class="media">Media Design</h2>
+                        <h2>Media Design</h2>
                         <p>
                             정보와 디자인의 균형을 고민하며 보기 좋은 디자인을 넘어,<br />이해하기 쉬운 경험을 만듭니다.
                         </p>
@@ -75,25 +75,25 @@
                 <div class="swiper mainwork-list">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="work-card">
+                            <div class="work-card" data-project="m1">
+                                <img src="images/thumb_jibangsidae.jpg" alt="지방시대 썸네일" />
+                                <p>서울 서버 '매우 혼잡' 해결하는 법.shorts</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="work-card" data-project="m2">
                                 <img src="#" alt="" />
                                 <p>작업물 제목</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="work-card">
+                            <div class="work-card" data-project="m3">
                                 <img src="#" alt="" />
                                 <p>작업물 제목</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="work-card">
-                                <img src="#" alt="" />
-                                <p>작업물 제목</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="work-card">
+                            <div class="work-card" data-project="d1">
                                 <img src="#" alt="" />
                                 <p>작업물 제목</p>
                             </div>
@@ -110,15 +110,18 @@
             <div class="work-modal-bg">
                 <div class="work-modal">
                     <!-- 닫기 -->
-                    <button class="wmodal-close">✕</button>
-
+                    <div class="close-wrap">
+                        <button class="wmodal-close">✕</button>
+                    </div>
                     <!-- 영상 영역 -->
                     <div class="modal-video">
-                        <!-- 나중에 video 넣을 자리 -->
+                        <iframe id="modal-video" width="100%" height="100%" src="" frameborder="0" allowfullscreen>
+                        </iframe>
                     </div>
 
                     <!-- 아래 영역 -->
                     <div class="modal-bottom">
+                        <h2 id="modal-title"></h2>
                         <!-- 더보기 -->
                         <details class="modal-detail">
                             <summary>▶ 더보기</summary>
@@ -126,21 +129,21 @@
                             <div class="detail-wrap">
                                 <div class="detail-item full">
                                     <h4>제작 기간 / 사용 기술</h4>
-                                    <p></p>
+                                    <p id="w-info"></p>
                                 </div>
 
                                 <div class="detail-item">
                                     <h4>기획 의도</h4>
-                                    <p></p>
+                                    <p id="w-purpose"></p>
                                 </div>
 
                                 <div class="detail-item">
                                     <h4>제작 과정</h4>
-                                    <p></p>
+                                    <p id="w-process"></p>
                                 </div>
-                                <div class="detail-item full">
+                                <div class="detail-item full" id="link-box">
                                     <h4>배포 링크</h4>
-                                    <p></p>
+                                    <a id="w-link" target="_blank"> 보러가기 → </a>
                                 </div>
                             </div>
                         </details>
