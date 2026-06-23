@@ -4,13 +4,28 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>minfolio</title>
-
+        <link rel="icon" href="images/favicon.png" />
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/all.css" />
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
+        <!-- ------------------------
+     인트로 (시작 영상)
+     ------------------------ -->
+
+        <div id="intro">
+            <video id="intro-video" muted playsinline>
+                <source src="videos/visu_sample.mp4" type="video/mp4" />
+            </video>
+
+            <button class="skip">
+                <img src="images/replay_btn.png" />
+                <span>넘어가기</span>
+            </button>
+        </div>
+
         <!-- ------------------------
      헤더
      ------------------------ -->
@@ -29,9 +44,12 @@
      비주얼 
     ------------------------ -->
         <section id="visual">
-            <video src="videos/visu_sample.mp4"></video>
+            <video src="videos/visu_sample.mp4" id="visual-video"></video>
             <div class="inner">
-                <button class="replay">다시 보기</button>
+                <button class="replay active">
+                    <img src="./images/replay_btn.png" alt="" />
+                    <span>다시 보기</span>
+                </button>
             </div>
         </section>
 
@@ -164,11 +182,14 @@
                     <div class="contome">
                         <h1>저와 함께 해요~ :)</h1>
                     </div>
-                    <img src="" alt="종이 비행기" />
+                    <img src="images/cont_paperplane.png" alt="종이 비행기" />
                 </div>
                 <div class="mailbox">
-                    <p>나의메일주소@어쩌구</p>
-                    <button class="copy">복사</button>
+                    <p id="mailAddress">ddurise@gmail.com</p>
+                    <button class="copy">
+                        <img src="./images/copy_btn.png" alt="" />
+                        <span>복사</span>
+                    </button>
                 </div>
 
                 <form class="contact-form" id="contactForm">
@@ -208,16 +229,34 @@
                 <div class="footer-info">
                     <div class="myinfobox">
                         <p>류지민</p>
-                        <span>.</span> <span>Daegu</span> <img src="" alt="아이콘" />
+                        <span>.</span> <span>Daegu</span> <img src="images/footer_icon.png" alt="구분 아이콘" />
                         <span>motion graphic / media design</span>
                     </div>
-                    <div class="iconbox">아 이 콘 들</div>
+                    <div class="iconbox">
+                        <a href="https://www.youtube.com/@DDURISERYU" target="_blank">
+                            <img src="./images/icon_youtube.png" alt="유튜브" />
+                            <span>유튜브</span>
+                        </a>
+                        <a href="mailto:ddurise@gmail.com">
+                            <img src="./images/icon_mail.png" alt="메일 보내기" />
+                            <span>메일 보내기</span>
+                        </a>
+                        <a href="./files/resume.pdf" download>
+                            <img src="./images/icon_resum.png" alt="이력서 다운로드" />
+                            <span>이력서 다운로드</span>
+                        </a>
+                    </div>
                 </div>
                 <p>© 2026 Jimin Ryu. All rights reserved.</p>
             </div>
         </footer>
 
+        <div class="crayon-wrap">
+    <img src="./images/bg_creyon.png" alt="" class="bg-crayon">
+</div>
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/work.js"></script>
     </body>
 </html>

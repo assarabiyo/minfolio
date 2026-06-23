@@ -31,11 +31,11 @@
                 <div class="work" id="movie">
                     <h2 class="title">영상</h2>
                     <div class="work-con">
-                        <div class="work-card">
+                        <div class="work-card" data-project="m1">
                             <img src="images/thumb_jibangsidae.jpg" alt="지방시대 썸네일" />
                             <p>작업물 제목</p>
                         </div>
-                        <div class="work-card">
+                        <div class="work-card" data-project="m2">
                             <img src="#" alt="" />
                             <p>작업물 제목</p>
                         </div>
@@ -67,6 +67,53 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 모달 배경 -->
+            <div class="work-modal-bg">
+                <div class="work-modal">
+                    <!-- 닫기 -->
+                    <div class="close-wrap">
+                        <button class="wmodal-close">✕</button>
+                    </div>
+                    <!-- 영상 영역 -->
+                    <div class="modal-video">
+                        <iframe id="modal-video" width="100%" height="100%" src="" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <!-- 아래 영역 -->
+                    <div class="modal-bottom">
+                        <h2 id="modal-title"></h2>
+                        <!-- 더보기 -->
+                        <details class="modal-detail">
+                            <summary>▶ 더보기</summary>
+
+                            <div class="detail-wrap">
+                                <div class="detail-item full">
+                                    <h4>제작 기간 / 사용 기술</h4>
+                                    <p id="w-info"></p>
+                                </div>
+
+                                <div class="detail-item">
+                                    <h4>기획 의도</h4>
+                                    <p id="w-purpose"></p>
+                                </div>
+
+                                <div class="detail-item">
+                                    <h4>제작 과정</h4>
+                                    <p id="w-process"></p>
+                                </div>
+                                <div class="detail-item full" id="link-box">
+                                    <h4>배포 링크</h4>
+                                    <a id="w-link" target="_blank"> 보러가기 → </a>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <script src="js/work.js"></script>
     </body>
 </html>
