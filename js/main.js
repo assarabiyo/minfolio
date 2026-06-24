@@ -19,12 +19,17 @@ const introVideo = document.getElementById("intro-video");
 const skipBtn = document.querySelector(".skip");
 
 // 처음 들어오면 재생
-introVideo.play();
-document.body.classList.add("intro-open");
+if (!sessionStorage.getItem("introPlayed")) {
+    document.body.classList.add("intro-open");
+    introVideo.play();
+} else {
+    intro.style.display = "none";
+}
 
 function closeIntro() {
     intro.style.display = "none";
     document.body.classList.remove("intro-open");
+    sessionStorage.setItem("introPlayed", "true");
     window.scrollTo(0, 0);
 }
 
@@ -41,21 +46,33 @@ skipBtn.addEventListener("click", () => {
 
 // --------------------- 비쥬얼 - 리플레이
 
-const visualVideo = document.getElementById("visual-video");
 const replayBtn = document.querySelector(".replay");
 
-if (visualVideo && replayBtn) {
-    visualVideo.addEventListener("ended", () => {
-        console.log("영상 끝!");
-        replayBtn.classList.add("active");
-    });
-
+if (replayBtn) {
     replayBtn.addEventListener("click", () => {
-        visualVideo.currentTime = 0;
-        visualVideo.play();
-        replayBtn.classList.remove("active");
+        const intro = document.getElementById("intro");
+        const introVideo = document.getElementById("intro-video");
+
+        intro.style.display = "block";
+
+        document.body.classList.add("intro-open");
+
+        introVideo.currentTime = 0;
+        introVideo.play();
     });
 }
+
+// --------------------- 헤더 사이즈 줄이기
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 850) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
 
 // --------------------- 스와이퍼
 

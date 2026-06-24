@@ -60,18 +60,28 @@ header {
 
     background: #f5d77b;
     z-index: 999;
+
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    height: 60px; /* 원하는 높이 */
 }
 
 header .inner {
     height: 100%;
 
     background: url(../images/menu.png) no-repeat center center;
-
     background-size: 937px auto;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
+}
+
+header.scrolled .inner {
+    background-size: 900px auto;
 }
 
 .gnb {
@@ -289,7 +299,7 @@ header .inner {
 
 .mainwork-bottom {
     position: relative;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .swiper {
