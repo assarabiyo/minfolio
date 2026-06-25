@@ -1,0 +1,254 @@
+/* mobile.css */
+
+@media (max-width: 767px) {
+    section {
+        padding: 50px 0;
+    }
+
+    /* ------------------------
+모바일 메뉴
+------------------------ */
+    header {
+        display: none;
+    }
+
+    .floating-menu {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 9999;
+    }
+
+    .menu-btn {
+        width: 90px;
+        height: 90px;
+        border: none;
+        background: url("../images/copy_btn.png") center/contain no-repeat;
+        cursor: pointer;
+    }
+
+    .menu-btn:active {
+        transform: scale(0.92);
+    }
+
+    .mobile-menu {
+        display: none;
+        transform-origin: top right;
+    }
+    .mobile-menu.active {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        animation: pop 0.4s;
+    }
+
+    @keyframes pop {
+        0% {
+            transform: scale(0.7);
+            opacity: 0;
+        }
+        60% {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 10px 0 10px;
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* ------------------------
+soso한 위치 조정
+------------------------ */
+    #visual {
+        padding: 0;
+    }
+
+    /* ------------------------
+어바웃
+------------------------ */
+
+    .about-s h1 {
+        transform: translate(5px, -10px);
+        font-size: 2rem;
+    }
+
+    .about-box {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .media {
+        flex-direction: column-reverse;
+    }
+
+    .about-pic {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+    }
+    .about-txt {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .about-txt h2 {
+        font-size: 48px;
+    }
+    .about-txt p {
+        font-size: 14px;
+    }
+    .motion .about-txt {
+        margin-right: 0;
+    }
+
+    /* ------------------------
+대표 작업물
+------------------------ */
+
+    #work .title {
+        margin-bottom: 50px;
+    }
+
+    .swiper-slide {
+        transform: none;
+    }
+    .swiper-slide-prev {
+        -webkit-mask-image: none;
+    }
+
+    .swiper-slide-next {
+        -webkit-mask-image: none;
+    }
+
+    .swiper-slide-prev .work-card,
+    .swiper-slide-next .work-card {
+        transform: scale(0.95);
+        opacity: 0.5;
+        filter: none;
+    }
+
+    .swiper-slide-active .work-card {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .mainwork-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .swiper-pagination {
+        position: static;
+        transform: none !important;
+        left: auto !important;
+    }
+
+    .mainwork-bottom a {
+        text-align: center;
+    }
+
+    /* ------------------------
+컨택
+------------------------ */
+
+    .con-box {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contome {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .con-box > img {
+        flex: none;
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .contome h1 {
+        white-space: normal;
+        font-size: 2rem;
+        transform: translate(10px, -10px);
+    }
+
+    .contact-form {
+        margin: 0 15px;
+    }
+
+    /* ------------------------
+하단
+------------------------ */
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .myinfobox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        width: 100%;
+    }
+
+    .myinfobox p {
+        white-space: nowrap;
+        word-break: keep-all;
+        font-size: 14px;
+    }
+    .myinfobox span {
+        font-size: 13px;
+    }
+
+    /* ------------------------
+워크 리스트
+------------------------ */
+
+    .work-con {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .work-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .work-card img {
+        width: 100%;
+        aspect-ratio: 1.2;
+        object-fit: cover;
+    }
+
+    /* ------------------------
+워크 모달
+------------------------ */
+
+    .detail-wrap {
+        grid-template-columns: 1fr;
+    }
+
+     .detail-item.full{
+        grid-column:auto;
+    }
+}

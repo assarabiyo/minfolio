@@ -6,6 +6,7 @@
         <title>minfolio - worklist</title>
         <link rel="stylesheet" href="css/all.css" />
         <link rel="stylesheet" href="css/work.css" />
+        <link rel="stylesheet" href="css/mobile.css" />
     </head>
     <body>
         <!-- ------------------------
@@ -22,6 +23,21 @@
             </div>
         </header>
 
+        <!-- ------------------------
+     모바일 메뉴
+     ------------------------ -->
+
+        <div class="floating-menu">
+            <button class="menu-btn">MENU</button>
+
+            <ul class="mobile-menu">
+                <li><a href="/#visual">HOME</a></li>
+                <li><a href="/#about">ABOUT</a></li>
+                <li><a href="/#work">WORK</a></li>
+                <li><a href="/#contact">CONTACT</a></li>
+            </ul>
+        </div>
+
         <!--  ------------------------
      리스트
     ------------------------ -->
@@ -32,12 +48,12 @@
                     <h2 class="title">영상</h2>
                     <div class="work-con">
                         <div class="work-card" data-project="m1">
-                            <img src="images/thumb_jibangsidae.jpg" alt="지방시대 썸네일" />
-                            <p>작업물 제목</p>
+                            <img src="images/thumb_m1.jpg" alt="지방시대 섬네일" />
+                            <p>서울 서버 '매우 혼잡' 해결하는 법.shorts</p>
                         </div>
                         <div class="work-card" data-project="m2">
-                            <img src="#" alt="" />
-                            <p>작업물 제목</p>
+                            <img src="images/thumb_m2.jpg" alt="입맛습관 섬네일" />
+                            <p>입맛도 습관이니까!</p>
                         </div>
                         <div class="work-card">
                             <img src="#" alt="" />
@@ -52,13 +68,13 @@
                 <div class="work" id="design">
                     <h2 class="title">디자인 / etc.</h2>
                     <div class="work-con">
-                        <div class="work-card">
-                            <img src="#" alt="" />
-                            <p>작업물 제목</p>
+                        <div class="work-card" data-project="d1">
+                            <img src="images/thumb_d1.jpg" alt="사쿠란보 상세페이지 섬네일" />
+                            <p>루피시아 사쿠란보 상세페이지(가상)</p>
                         </div>
-                        <div class="work-card">
-                            <img src="#" alt="" />
-                            <p>작업물 제목</p>
+                        <div class="work-card" data-project="d2">
+                            <img src="images/thumb_d2.jpg" alt="미니카드 홈페이지 섬네일" />
+                            <p>카드형 미니 홈페이지</p>
                         </div>
                         <div class="work-card">
                             <img src="#" alt="" />
@@ -75,11 +91,8 @@
                     <div class="close-wrap">
                         <button class="wmodal-close">✕</button>
                     </div>
-                    <!-- 영상 영역 -->
-                    <div class="modal-video">
-                        <iframe id="modal-video" width="100%" height="100%" src="" frameborder="0" allowfullscreen>
-                        </iframe>
-                    </div>
+                    <!-- 메인 이미지 영역 : 900*506 -->
+                    <div class="modal-media" id="modal-media"></div>
 
                     <!-- 아래 영역 -->
                     <div class="modal-bottom">
@@ -107,6 +120,10 @@
                                     <h4>배포 링크</h4>
                                     <a id="w-link" target="_blank"> 보러가기 → </a>
                                 </div>
+                                <!-- 추가 이미지 가로 800px -->
+                                <div class="detail-item full extra-image-wrap">
+                                    <img id="w-extra-image" src="" alt="" />
+                                </div>
                             </div>
                         </details>
                     </div>
@@ -115,5 +132,14 @@
         </section>
 
         <script src="js/work.js"></script>
+        <script>
+            const menuBtn = document.querySelector(".menu-btn");
+            const mobileMenu = document.querySelector(".mobile-menu");
+
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("active");
+                menuBtn.classList.toggle("active");
+            });
+        </script>
     </body>
 </html>

@@ -32,6 +32,11 @@ body {
     overflow-x: hidden;
 }
 
+html,
+body{
+    overflow-x:hidden;
+}
+
 /* ------------------------
    공통
 ------------------------ */

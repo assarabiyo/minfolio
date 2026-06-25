@@ -7,8 +7,10 @@
         <link rel="icon" href="images/favicon.png" />
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
         <link rel="stylesheet" href="css/all.css" />
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/mobile.css" />
     </head>
     <body>
         <!-- ------------------------
@@ -40,6 +42,21 @@
             </div>
         </header>
 
+        <!-- ------------------------
+     모바일 메뉴
+     ------------------------ -->
+
+        <div class="floating-menu">
+            <button class="menu-btn">MENU</button>
+
+            <ul class="mobile-menu">
+                <li><a href="#visual">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#work">WORK</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+
         <!--  ------------------------
      비주얼 
     ------------------------ -->
@@ -59,17 +76,17 @@
      ------------------------ -->
         <section id="about">
             <div class="inner">
-                <div class="about-s">
+                <div class="about-s" data-aos="fade-up" data-aos-delay="0">
                     <h1>부드러운 색감, 통통 튀는 모션,<br />기억에 남는 이야기를 만들어요.</h1>
                 </div>
-                <div class="about-box motion">
+                <div class="about-box motion" data-aos="fade-right" data-aos-delay="100">
                     <img src="#" alt="" class="about-pic" />
                     <div class="about-txt">
                         <h2>Motion Graphics</h2>
                         <p>움직임 하나하나에 리듬감을 넣어,<br />시선이 머무는 순간을 디자인합니다.</p>
                     </div>
                 </div>
-                <div class="about-box media">
+                <div class="about-box media" data-aos="fade-left" data-aos-delay="200">
                     <div class="about-txt">
                         <h2>Media Design</h2>
                         <p>
@@ -86,14 +103,14 @@
     ------------------------ -->
         <section id="work">
             <div class="inner">
-                <div class="title">
+                <div class="title" data-aos="fade-up">
                     <h1>project</h1>
                 </div>
 
                 <!-- 섬네일 사이즈 : 428*357 -->
 
                 <!-- Swiper -->
-                <div class="swiper mainwork-list">
+                <div class="swiper mainwork-list" data-aos="zoom-in" data-aos-delay="100">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="work-card" data-project="m1">
@@ -109,8 +126,8 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="work-card" data-project="d1">
-                                <img src="#" alt="" />
-                                <p>작업물 제목</p>
+                                <img src="images/thumb_d1.jpg" alt="사쿠란보 상세페이지 섬네일" />
+                                <p>루피시아 사쿠란보 상세페이지(가상)</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -134,11 +151,8 @@
                     <div class="close-wrap">
                         <button class="wmodal-close">✕</button>
                     </div>
-                    <!-- 영상 영역 -->
-                    <div class="modal-video">
-                        <iframe id="modal-video" width="100%" height="100%" src="" frameborder="0" allowfullscreen>
-                        </iframe>
-                    </div>
+                    <!-- 메인 이미지 영역 : 900*506 -->
+                    <div class="modal-media" id="modal-media"></div>
 
                     <!-- 아래 영역 -->
                     <div class="modal-bottom">
@@ -166,6 +180,10 @@
                                     <h4>배포 링크</h4>
                                     <a id="w-link" target="_blank"> 보러가기 → </a>
                                 </div>
+                                <!-- 추가 이미지 가로 800px -->
+                                <div class="detail-item full extra-image-wrap">
+                                    <img id="w-extra-image" src="" alt="" />
+                                </div>
                             </div>
                         </details>
                     </div>
@@ -178,16 +196,16 @@
      ------------------------ -->
         <section id="contact">
             <div class="inner">
-                <div class="title">
+                <div class="title" data-aos="fade-up">
                     <h1>contact</h1>
                 </div>
-                <div class="con-box">
+                <div class="con-box" data-aos="fade-left" data-aos-delay="100">
                     <div class="contome">
                         <h1>저와 함께 해요~ :)</h1>
                     </div>
                     <img src="images/cont_paperplane.png" alt="종이 비행기" />
                 </div>
-                <div class="mailbox">
+                <div class="mailbox" data-aos="fade-up" data-aos-delay="300">
                     <p id="mailAddress">ddurise@gmail.com</p>
                     <button class="copy">
                         <img src="./images/copy_btn.png" alt="" />
@@ -195,7 +213,7 @@
                     </button>
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" data-aos="fade-up" data-aos-delay="300">
                     <input type="text" id="name" placeholder="성함 / 회사명" required />
                     <input type="email" id="email" placeholder="답장받을 이메일" required />
                     <textarea id="message" placeholder="간단한 문의를 남겨주세요!" required></textarea>
@@ -259,6 +277,7 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="js/main.js"></script>
         <script src="js/work.js"></script>
     </body>

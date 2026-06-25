@@ -74,13 +74,42 @@ window.addEventListener("scroll", () => {
     }
 });
 
+// --------------------- 모바일 메뉴
+
+const menuBtn = document.querySelector(".menu-btn");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+});
+
 // --------------------- 스와이퍼
 
 var swiper = new Swiper(".mainwork-list", {
     slidesPerView: 2.5,
     spaceBetween: 20,
+    breakpoints: {
+        0: {
+            slidesPerView: 1.3,
+            spaceBetween: 0,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
+
     grabCursor: true,
     centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
@@ -155,4 +184,10 @@ document.querySelectorAll(".work-card").forEach((card) => {
 
         modal2.classList.add("active");
     });
+});
+
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 50,
 });
